@@ -12,6 +12,7 @@ Controle de entrada e saída de pessoas do grupo WhatsApp
     - Data de Entrada
     - Data de saída
     - Status => (Saiu/Continua)
+    - Alterar o número
 
 # Grupo Precisará :
     - Importar os Grupos
@@ -30,3 +31,9 @@ Controle de entrada e saída de pessoas do grupo WhatsApp
 # Operações
     - Entrada do grupo
     - Saída do grupo
+    - Mudança de número
+
+# Regex Capturar Alunos com Data
+[\d/ :]* - *(\+55 [\d\s-]*) (entrou|saiu)(\+55 [\d\s-]*$)?
+# Regex Nome e Número do grupo
+Conversa do WhatsApp com (\[(\d{1,})].*)
