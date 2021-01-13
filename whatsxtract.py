@@ -3,6 +3,7 @@ from glob import glob
 import os
 import re
 from pprint import pprint
+
 class Grupo:
     def __init__(self, arquivo):
         self.arquivo = arquivo
@@ -44,9 +45,9 @@ class Aluno:
         for linha in conversa:
             resultado = re.search(padrao_aluno,linha,re.MULTILINE)
 
-            if resulta != None:
+            if resultado != None:
                 horario = resultado.group(1)
-                numero = resultado.group(2)
+                numero = resultado.group(2).replace(' ','').replace('\xa0','')
                 operacao = resultado.group(3)
                 novo_numero =resultado.group(4)
 
@@ -60,10 +61,11 @@ class Aluno:
                     aluno = Aluno.criar_aluno(numero)
                     aluno.entrada_saida(Operacao.ENTRADA, horario)
                     alunos.append(aluno)
-                else
+                else:
                     for aluno in alunos:
                         if aluno.numero == numero:
-                            aluno.entrada_saida(Operacao.SAIDA, horario)               
+                            aluno.entrada_saida(Operacao.SAIDA, horario)        
+        return alunos      
 
 
 
@@ -78,10 +80,13 @@ class Aluno:
             self.data_entrada = horario
         else:
             self.data_saida = horario
+            presente = False
 
     def remover_duplicatas(alunos):
+        ...
 
     def exportar_contatos(arquivo, alunos):
+        ...
 
 if __name__ == '__main__':
    arquivos_grupos = Grupo.importar_grupos()
@@ -91,5 +96,8 @@ if __name__ == '__main__':
    grupo = Grupo(arquivos_grupo)
 
    print(f'Grupo: {grupo.nome} \nNúmero: {grupo.numero}')
+
+   for aluno in grupo.alunos:
+       print(aluno.numero)
 
 
