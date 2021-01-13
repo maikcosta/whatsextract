@@ -17,6 +17,7 @@ Controle de entrada e saída de pessoas do grupo WhatsApp
     - Importar os Grupos
     - Exportar os contatos
     - Extrair o Nome e Número
+    - Remover duplicados
 
 # Aluno precisa:
     - Extrair alunos
@@ -24,3 +25,8 @@ Controle de entrada e saída de pessoas do grupo WhatsApp
     - Controlar data de saída
     - Criar contato
     - Exportar contato
+    - Remover duplicados
+
+# Operações
+    - Entrada do grupo
+    - Saída do grupo
