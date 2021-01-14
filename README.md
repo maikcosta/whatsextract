@@ -1,5 +1,5 @@
 # Whatsextract
-Controle de entrada e saída de pessoas do grupo WhatsApp
+Controle de entrada e saída de pessoas do grupo WhatsApp utilizando o RegEx
 
 # Grupos possuem:
     - Arquivo
